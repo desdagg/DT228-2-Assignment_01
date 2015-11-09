@@ -34,8 +34,9 @@ class Competition
      for(int j = 1 ; j < data.length ; j+=2)
      {
       athlete.addResult(header[j], data[j], data[j+1]); 
-       athletes.add(athlete);
+      
      }
+     athletes.add(athlete);
      
     }
   }
