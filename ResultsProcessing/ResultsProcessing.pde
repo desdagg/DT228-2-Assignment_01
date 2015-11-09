@@ -1,20 +1,17 @@
-//ArrayList<Hurdles> hurdles = new ArrayList<Hurdles>();
-//ArrayList<Shot> shot = new ArrayList<Shot>();
-//ArrayList<LongJump> longjump = new ArrayList<LongJump>();
-//ArrayList<Twohundred> twohundred = new ArrayList<Twohundred>();
-//ArrayList<Eighthundred> eighthundred = new ArrayList<Eighthundred>();
-//ArrayList<TotalScore> totalscore = new ArrayList<TotalScore>();
+//defining the input file names
 String EVT_TYP_FILE = "event_type.csv";
 String RSLT_FILE = "results_4.csv";
 
 void setup()
 {
-  size(1000, 1000);
+  size(500, 500);
   smooth();
   
+  //
   Competition comp = new Competition(EVT_TYP_FILE);
   comp.addResults(RSLT_FILE);
   comp.printEvents();
+  comp.drawPoints();
   testMethod();
   
 }
@@ -34,30 +31,9 @@ void testMethod()
 
 
 
-
-
-
-
-void loadResults()
-{
-  String[] header;
-  
-  String[] athleteResults = loadStrings(RSLT_FILE);
-  header = new String[athleteResults[0].split(",").length];
-  arrayCopy(athleteResults[0].split(","), header);
-   /*for (int i = 0 ; i < athleteResults.length ; i++)
-    {
-      
-    }*/
-  println(header);
-    
-}
-
-
-
 void draw()
 {
-  background(84, 128, 161);
+  //background(84, 128, 161);
   
   
 }

@@ -34,12 +34,38 @@ class Competition
      for(int j = 1 ; j < data.length ; j+=2)
      {
       athlete.addResult(header[j], data[j], data[j+1]); 
-       
+       athletes.add(athlete);
      }
      
     }
   }
   
+  
+  void drawPoints()
+{
+  float gap = (float) width / athletes.size();
+  float max = Float.MIN_VALUE;
+  println("drawPoints got here " + athletes.size());
+  for (Athlete athlete:athletes)
+  {
+    println(athlete.name + " " + athlete.getTotalPoints());
+    if (athlete.getTotalPoints() > max)
+    {
+      max = athlete.getTotalPoints() ;
+    }
+  }
+  
+  float scaleFactor = (float) height / max;  
+  for (int i = 0 ; i < athletes.size() ; i ++)
+  {
+    Athlete athlete = athletes.get(i);
+    stroke(athlete.colour);
+    fill(athlete.colour);
+    float x = i * gap;
+    rect(x, height, gap, - (athlete.getTotalPoints() * scaleFactor));
+  }
+}
+
   
   void printEvents()
   {
