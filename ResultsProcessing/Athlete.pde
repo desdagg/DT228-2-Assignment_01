@@ -10,8 +10,18 @@ class Athlete
   {
      eventResults = new ArrayList<EventResult>();
     name = inName;
+    
+    //setting a specific colour for davids points -- if inName is the String "David Dagg"
+    if(inName.equals("David Dagg"))
+    {
+     colour = color(255, 0, 0); 
+      println("got here David colour");
+    }
+    else
+    {
     //give the athlete a random colour
-    colour = color(random(0,255),random(0,255),random(0,255));
+    colour = color(random(0,150),random(0,255),random(100,255));
+    }
     
   }
   

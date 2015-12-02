@@ -44,26 +44,54 @@ class Competition
   
   void drawPoints()
 {
-  float gap = (float) width / athletes.size();
-  float max = Float.MIN_VALUE;
+  //setting a border of ten percent for the barchart 
+  float border = width * 0.1f;
+  //setting the gap/width of the bars
+  float gap = (float) (width - (border * 2.0f)) / athletes.size();
+  //setting max to be the minimum value a float can be -- probably wont need this
+  //float max = Float.MIN_VALUE;
+  
+  
+  //create the border with values on Y axis
+  stroke(248,248,255);
+  //drawing the horizontal axis
+  line(border, (height - border) + 1, width - border, (height - border) + 1);
+  
+  //drawing the vertical axis
+  float tickSize = border * 0.1f;
+  line(border - 1, border, border - 1, height - border);
+  
   println("drawPoints got here " + athletes.size());
-  for (Athlete athlete:athletes)
+ for (Athlete athlete:athletes)
   {
     println(athlete.name + " " + athlete.getTotalPoints());
-    if (athlete.getTotalPoints() > max)
+  }
+  
+  
+  //try get a function to read the max athlete value.
+  //use it to then round up to the nearest 500
+  //then use that value for the mapping...
+  //shouldnt be too hard, just a greater than loop or something.
+  
+  
+   /* if (athlete.getTotalPoints() > max)
     {
       max = athlete.getTotalPoints() ;
     }
+   
   }
-  
-  float scaleFactor = (float) height / max;  
+  //setting the scalefactor to scale the points to fit in the drawing
+  float scaleFactor = (float) (height - (border * 2)) / max;  
+  println("got here scale factor is" + scaleFactor);*/
   for (int i = 0 ; i < athletes.size() ; i ++)
   {
     Athlete athlete = athletes.get(i);
     stroke(athlete.colour);
     fill(athlete.colour);
     float x = i * gap;
-    rect(x, height, gap, - (athlete.getTotalPoints() * scaleFactor));
+    //testing map instead of scalefactor
+    float m = map(athlete.getTotalPoints(), 0, 3500, 0, height - (border * 2));
+    rect(x + border, height - border, gap, -m /*(athlete.getTotalPoints() * scaleFactor)*/);
   }
 }
 

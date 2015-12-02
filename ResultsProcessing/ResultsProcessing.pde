@@ -4,9 +4,9 @@ String RSLT_FILE = "results_4.csv";
 
 void setup()
 {
-  size(1000, 1000);
+  size(1000, 800);
   smooth();
-  
+  background(0);
   //
   Competition comp = new Competition(EVT_TYP_FILE);
   comp.addResults(RSLT_FILE);
@@ -15,7 +15,7 @@ void setup()
   testMethod();
   
 }
-
+//should probably make a commit some time soon....
 
 
 void testMethod()
@@ -33,7 +33,7 @@ void testMethod()
 
 void draw()
 {
-  //background(84, 128, 161);
+  
   
   
 }
