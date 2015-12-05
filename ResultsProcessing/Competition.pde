@@ -11,11 +11,11 @@ class Competition
     eventTypes = new ArrayList<EventType>();
    
     String[] lines = loadStrings(eventFile);
+    
     for (int i = 0 ; i < lines.length ; i ++)
     {
       EventType event = new EventType(lines[i]);
       eventTypes.add(event);
-      
     }
   }
   
@@ -92,6 +92,11 @@ class Competition
     //testing map instead of scalefactor
     float m = map(athlete.getTotalPoints(), 0, 3500, 0, height - (border * 2));
     rect(x + border, height - border, gap, -m /*(athlete.getTotalPoints() * scaleFactor)*/);
+    if (i == 2)
+    {
+      textAlign(CENTER);
+      text("*Red is David", (x + border) + (gap/2), height - (border/2));
+    }
   }
 }
 

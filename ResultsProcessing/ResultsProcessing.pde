@@ -12,10 +12,9 @@ void setup()
   comp.addResults(RSLT_FILE);
   comp.printEvents();
   comp.drawPoints();
-  testMethod();
+  //testMethod();
   
 }
-//should probably make a commit some time soon....
 
 
 void testMethod()

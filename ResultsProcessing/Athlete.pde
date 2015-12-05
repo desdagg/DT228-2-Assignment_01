@@ -1,4 +1,4 @@
-class Athlete
+2class Athlete
 {
   ArrayList<EventResult> eventResults;
   
@@ -20,7 +20,7 @@ class Athlete
     else
     {
     //give the athlete a random colour
-    colour = color(random(0,150),random(0,255),random(100,255));
+    colour = color(random(0,75),random(0,255),random(100,255));
     }
     
   }
