@@ -1,4 +1,4 @@
-2class Athlete
+class Athlete
 {
   ArrayList<EventResult> eventResults;
   
