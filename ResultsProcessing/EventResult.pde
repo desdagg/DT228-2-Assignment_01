@@ -21,6 +21,7 @@ class EventResult
       
       //convert each element into a float
       float minute = float(time[0]);
+      
       float seconds = float(time[1]);
      
       //calculating the total time in seconds
@@ -33,8 +34,23 @@ class EventResult
     //converting the string athleteResult into a float and setting result equal to it
     result = float(athleteResult);
     }
-    
+  printData();
   }
+  
+  float singleEvent(String input)
+  {
+    if (input.equals(type) == true)
+    {
+      float output = points;
+      return points;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+    
+  
   
   void printData()
   {

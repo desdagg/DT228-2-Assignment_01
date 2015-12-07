@@ -40,7 +40,18 @@ class Athlete
      //adding up all the points an athlete got.
     totalPoints += eventResult.points;
    }
-    
     return totalPoints;
-  }
+ }
+ 
+  float getEventPoints(String event)
+ {
+   float eventPoints = 0;
+   for (EventResult eventResult:eventResults)
+   {
+     eventResult.singleEvent(event);
+     println("did the yoke");
+   }
+   return eventPoints;
+ }
+ 
 }

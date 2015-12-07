@@ -48,6 +48,7 @@ class Competition
   
   void drawPoints()
 {
+
   //setting a border of ten percent for the barchart 
   float border = width * 0.1f;
   //setting the gap/width of the bars
@@ -99,6 +100,26 @@ class Competition
       text("*Red is David", (x + border) + (gap/2), height - (border/2));
     }
   }
+}
+
+
+void removehurdles(String resultFile)
+{
+  String bob = "Hurdles";
+      String[] lines = loadStrings(resultFile);
+    
+    String[] header = lines[0].split(",");
+  
+      for (int j = 1 ; j < lines.length ; j++)
+    {
+     String[] data = lines[j].split(",");
+     
+     Athlete  athlete = new Athlete(data[0]);
+    for (int i = 0 ; i < athletes.size() ; i ++)
+  {
+    athlete.getEventPoints(bob);
+  }
+    }
 }
 
 
@@ -169,9 +190,7 @@ popMatrix();
   {
     for (EventType event:eventTypes)
     {
-      event.printData();
-      
+      event.printData(); 
     }
-    
   }
 }

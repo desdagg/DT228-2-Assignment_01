@@ -25,6 +25,9 @@ void setup()
   //testMethod();
   pushMatrix();
     cp5 = new ControlP5(this);
+    
+    //EventType event = new EventType(EVT_TYP_FILE);
+    
     // create a toggle and change the default look to a (on/off) switch look
      cp5.addToggle("Dimension")
      .setPosition(width*0.02, height*0.3)
@@ -116,7 +119,15 @@ void threebars()
 
 void draw()
 {
-
+  float a = width * 0.07;
+  float b = height/1.9;
+  pushMatrix();
+  //stroke(255);
+  translate(a,b);
+  rotate(HALF_PI);
+  textFont(createFont("sans-serif",25));
+  text("Athletes total points",0,0);
+  popMatrix();
 //while(flag1 == 0)
 //{
 //    camera(mouseX, mouseY, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
@@ -137,11 +148,23 @@ void Dimension(boolean theFlag) {
   else 
   {
     background(0);
-
     flag1 = 0;
     println("disengaged");
-    threebars();
+    threebars(); 
+  }
+} 
+
+
+void Hurdles(boolean theFlag)
+{
+  if(theFlag == true)
+  {
     
   }
-  
-} 
+  else
+  {
+    
+  }
+}
+
+
