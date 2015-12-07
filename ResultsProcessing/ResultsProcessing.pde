@@ -19,16 +19,63 @@ void setup()
   //comp.addResults(RSLT_FILE);
   //comp.printEvents();
 //  comp.drawPoints();
-  
+  int btnwdth, btnhgt = 0;
+  btnwdth = int(width*0.055);
+  btnhgt = int(height*0.04);
   //testMethod();
   pushMatrix();
     cp5 = new ControlP5(this);
     // create a toggle and change the default look to a (on/off) switch look
      cp5.addToggle("Dimension")
-     .setPosition(20,250)
-     .setSize(55,40)
+     .setPosition(width*0.02, height*0.3)
+     .setSize(btnwdth, btnhgt)
      .setValue(true)
-     .setMode(ControlP5.SWITCH);
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(255,50,00))
+     .setColorBackground(color(50,0,50));
+ 
+      cp5.addToggle("Hurdles")
+     .setPosition(width*0.92, height*0.143)
+     .setSize(btnwdth, btnhgt)
+     .setValue(true)
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(0,0,255))
+     .setColorBackground(color(50,0,50));
+    
+      cp5.addToggle("LongJump")
+     .setPosition(width*0.92, height*0.286)
+     .setSize(btnwdth, btnhgt)
+     .setValue(true)
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(255,255,0))
+     .setColorBackground(color(50,0,50));     
+     
+      cp5.addToggle("ShotPut")
+     .setPosition(width*0.92, height*0.429)
+     .setSize(btnwdth, btnhgt)
+     .setValue(true)
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(0,255,0))
+     .setColorBackground(color(50,0,50));
+     
+      cp5.addToggle("Twohundred")
+     .setPosition(width*0.92, height*0.571)
+     .setSize(btnwdth, btnhgt)
+     .setValue(true)
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(255,150,0))
+     .setColorBackground(color(50,0,50));   
+   
+      cp5.addToggle("Eighthundred")
+     .setPosition(width*0.92, height*0.714)
+     .setSize(btnwdth, btnhgt)
+     .setValue(true)
+     .setMode(ControlP5.SWITCH)
+     .setColorActive(color(255,0,255))
+     .setColorBackground(color(50,0,50));  
+     
+     
+     
   popMatrix();
 //  if (flag1 == 1)
 //  {

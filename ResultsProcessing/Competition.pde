@@ -106,9 +106,12 @@ class Competition
 void drawMorePoints()
 {
   pushMatrix();
-  camera(70.0, 35.0, (height/2) / tan(PI/6) ,
+
+
+  camera(70, 35.0, (height/2) / tan(PI/6) ,
          width/2, height/2, -200,
          0.0, 1.0, 0.0);
+
   float border = width * 0.1f;   
 float gap = (float) (width - (border * 2.0f)) / athletes.size();
 //stroke(248,248,255);
@@ -153,6 +156,8 @@ println("drawMorePoints got here" + athletes.size());
      box(gap, m, gap);
      popMatrix();
   }
+
+
 popMatrix();
   
 }
