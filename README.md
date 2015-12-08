@@ -13,3 +13,7 @@ You can switch between barcharts with a toggle on the left of the screen.
 ==========================
 
 ![Alt text](https://github.com/desdagg/DT228-2-Assignment_01/blob/master/screenshots/2D_graph.JPG "2D Graph")
+
+=========================
+
+![Alt text](https://github.com/desdagg/DT228-2-Assignment_01/blob/master/screenshots/3D_graph.JPG "3D Graph")
