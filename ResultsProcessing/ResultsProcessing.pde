@@ -121,6 +121,7 @@ void draw()
 {
   float a = width * 0.07;
   float b = height/1.9;
+  float d = height * 0.95;
   pushMatrix();
   //stroke(255);
   translate(a,b);
@@ -128,6 +129,7 @@ void draw()
   textFont(createFont("sans-serif",25));
   text("Athletes total points",0,0);
   popMatrix();
+
 //while(flag1 == 0)
 //{
 //    camera(mouseX, mouseY, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
